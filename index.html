@@ -5,301 +5,232 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asku Coffee - Crafted for You</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>body { font-family: 'Inter', sans-serif; }</style>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        askuHijau: '#0F3D1C',
+                        askuCokelat: '#7A5C43',
+                        askuMuda: '#F9F8F6'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gray-50 text-gray-800 scroll-smooth">
+<body class="bg-askuMuda text-gray-800 scroll-smooth">
 
     <!-- NAVBAR -->
-    <nav class="sticky top-0 bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold tracking-wider text-emerald-800">ASKU<span class="text-emerald-500">.</span></a>
-            <div class="hidden md:flex space-x-8 font-medium text-gray-600">
-                <a href="#home" class="hover:text-emerald-600">Home</a>
-                <a href="#features" class="hover:text-emerald-600">Keunggulan</a>
-                <a href="#menu" class="hover:text-emerald-600">Menu Kami</a>
+    <nav class="sticky top-0 bg-white/90 backdrop-blur-md border-b border-gray-100 z-50">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
+            <!-- Logo Muka + Sampingnya Tulisan -->
+            <div class="flex items-center space-x-3">
+                <img src="asku-logo-muka_2.png" alt="Asku Logo" class="h-12 w-12 object-contain">
+                <img src="asku-logo-tulisan_2.png" alt="Asku Coffee" class="h-9 object-contain">
             </div>
-            <a href="https://wa.me/628123456789" target="_blank" class="bg-emerald-700 text-white px-5 py-2 rounded-full font-semibold text-sm">Hubungi Kami</a>
+            
+            <!-- Menu Atas Sesuai Request -->
+            <div class="hidden md:flex space-x-10 font-bold text-gray-600 text-xs tracking-widest">
+                <a href="#about" class="hover:text-askuHijau transition-colors">ABOUT</a>
+                <a href="#menu" class="hover:text-askuHijau transition-colors">MENU</a>
+                <a href="#store" class="hover:text-askuHijau transition-colors">STORE</a>
+                <a href="#contact" class="hover:text-askuHijau transition-colors">CONTACT US</a>
+            </div>
+            
+            <!-- CTA Button -->
+            <a href="https://wa.me/628123456789" target="_blank" class="bg-askuHijau hover:bg-opacity-90 text-white px-6 py-2.5 rounded-full font-bold text-xs tracking-wider transition-all">
+                ORDER NOW
+            </a>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section id="home" class="max-w-6xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6">
-            <span class="bg-emerald-50 text-emerald-700 text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full">☕ Welcome to Asku Coffee</span>
-            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">Sip the Goodness, <br><span class="text-emerald-700">Crafted for You.</span></h1>
-            <p class="text-gray-600 text-lg max-w-md">Nikmati perpaduan biji kopi pilihan lokal terbaik yang diseduh dengan sepenuh hati. Tempat terbaik untuk bersantai dan produktif.</p>
-            <div class="flex flex-wrap gap-4 pt-4">
-                <a href="https://wa.me/628123456789" target="_blank" class="bg-emerald-700 text-white px-6 py-3 rounded-xl font-semibold flex items-center space-x-2">💬 <span>Pesan via WhatsApp</span></a>
-                <a href="#" class="bg-white text-gray-700 border border-gray-200 px-6 py-3 rounded-xl font-semibold flex items-center space-x-2">🛵 <span>Order via GoFood / GrabFood</span></a>
+    <!-- HERO SECTION (ABOUT) -->
+    <section id="about" class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-28 grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-8">
+            <span class="text-askuCokelat text-xs font-bold tracking-widest uppercase bg-amber-100/40 px-3 py-1.5 rounded">JALUR RASA UTAMA</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-askuHijau leading-[1.1] tracking-tight">
+                Sip the Goodness, <br><span class="text-askuCokelat">Crafted for You.</span>
+            </h1>
+            <p class="text-gray-600 text-base md:text-lg leading-relaxed max-w-lg">
+                Asku Coffee menghadirkan standar baru dalam menikmati kopi harianmu. Memadukan kekayaan biji kopi lokal dengan teknik seduh modern untuk menciptakan cita rasa yang seimbang, bersih, dan memikat.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-2">
+                <a href="https://wa.me/628123456789" target="_blank" class="bg-askuHijau text-white px-8 py-4 rounded-xl font-bold text-sm tracking-wide hover:shadow-lg transition-all">
+                    Pesan via WhatsApp
+                </a>
+                <a href="#menu" class="bg-white border border-gray-200 text-gray-700 px-8 py-4 rounded-xl font-bold text-sm tracking-wide hover:bg-gray-50 transition-all">
+                    Lihat Semua Menu
+                </a>
             </div>
         </div>
-        <div class="flex justify-center">
-            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=600" alt="Asku Coffee" class="w-80 h-80 md:w-96 md:h-96 object-cover rounded-3xl shadow-2xl">
-        </div>
-    </section>
-
-    <!-- KEUNGGULAN -->
-    <section id="features" class="bg-emerald-900 text-white py-16">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-12">Mengapa Asku Coffee?</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-6 bg-emerald-800/50 rounded-2xl border border-emerald-700/50">
-                    <div class="text-3xl mb-4">🌱</div>
-                    <h3 class="text-xl font-semibold mb-2">100% Biji Kopi Lokal</h3>
-                    <p class="text-emerald-200 text-sm">Diambil langsung dari petani lokal Indonesia pilihan dengan standar kualitas racikan terbaik.</p>
-                </div>
-                <div class="p-6 bg-emerald-800/50 rounded-2xl border border-emerald-700/50">
-                    <div class="text-3xl mb-4">✨</div>
-                    <h3 class="text-xl font-semibold mb-2">Rasa Autentik & Konsisten</h3>
-                    <p class="text-emerald-200 text-sm">Setiap cangkir dibuat oleh barista berpengalaman untuk memastikan cita rasa kopi yang selalu nikmat.</p>
-                </div>
-                <div class="p-6 bg-emerald-800/50 rounded-2xl border border-emerald-700/50">
-                    <div class="text-3xl mb-4">🏡</div>
-                    <h3 class="text-xl font-semibold mb-2">Suasana Nyaman</h3>
-                    <p class="text-emerald-200 text-sm">Desain tempat yang minimalis dan tenang, sangat cocok untuk kerja, nugas, atau sekadar nongkrong.</p>
-                </div>
-            </div>
+        <div class="relative flex justify-center">
+            <div class="absolute inset-0 bg-gradient-to-tr from-askuHijau/10 to-transparent rounded-[2rem] blur-2xl -z-10"></div>
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800" alt="Asku Coffee Vibe" class="w-full max-w-md h-[480px] object-cover rounded-[2.5rem] shadow-xl border-4 border-white">
         </div>
     </section>
 
     <!-- MENU SECTION -->
-    <section id="menu" class="max-w-6xl mx-auto px-6 py-20">
-        <div class="text-center max-w-xl mx-auto mb-16">
-            <h2 class="text-4xl font-bold text-gray-900 mb-4">Menu Kami</h2>
-            <p class="text-gray-600">Jelajahi petualangan rasa dari barisan kopi signature, kesegaran non-kopi, hingga pastry premium Asku.</p>
+    <section id="menu" class="max-w-7xl mx-auto px-6 md:px-12 py-20 bg-white rounded-[3rem] shadow-sm my-12">
+        <div class="text-center max-w-xl mx-auto mb-20">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-askuHijau tracking-tight mb-4">Our Menu List</h2>
+            <p class="text-gray-500 text-sm">Dari kehangatan kopi pilihan hingga kesegaran non-kopi dan kelembutan pastry premium.</p>
         </div>
 
-        <!-- CATEGORY 1: COFFEE -->
-        <div class="mb-16">
-            <h3 class="text-2xl font-bold text-emerald-800 border-b border-gray-200 pb-3 mb-8">☕ Coffee Selection</h3>
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- 1. COFFEE SELECTION -->
+        <div class="mb-20">
+            <div class="flex items-center space-x-3 mb-10 border-b border-gray-100 pb-4">
+                <h3 class="text-xl font-extrabold text-askuHijau tracking-wider uppercase border-l-4 border-askuCokelat pl-3">☕ Coffee Selection</h3>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Signature -->
+                <div class="group bg-askuMuda p-5 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-md border border-transparent hover:border-gray-100">
+                    <div class="overflow-hidden rounded-xl mb-4 aspect-square bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1553909489-cd47e0907980?auto=format&fit=crop&q=80&w=400" alt="Es Kopi Susu Asku" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="text-[10px] bg-askuHijau text-white font-bold px-2 py-0.5 rounded uppercase tracking-wider">SIGNATURE ⭐</span>
+                    <h4 class="font-bold text-gray-900 text-base mt-2">Es Kopi Susu Asku</h4>
+                    <p class="text-gray-500 text-xs mt-1 leading-relaxed">Racikan kopi susu rahasia yang manis, legit, dan bikin rindu.</p>
+                </div>
                 <!-- Espresso -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1510707577719-07f1b69c2ee6?auto=format&fit=crop&q=80&w=300" alt="Espresso" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Espresso</h4>
-                    <p class="text-gray-500 text-xs mt-2">Ekstraksi murni biji kopi pilihan dengan aroma intens dan crema tebal yang kuat.</p>
+                <div class="group bg-askuMuda p-5 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-md border border-transparent hover:border-gray-100">
+                    <div class="overflow-hidden rounded-xl mb-4 aspect-square bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1510707577719-07f1b69c2ee6?auto=format&fit=crop&q=80&w=400" alt="Espresso" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h4 class="font-bold text-gray-900 text-base mt-2">Espresso / Double Espresso</h4>
+                    <p class="text-gray-500 text-xs mt-1 leading-relaxed">Ekstraksi murni biji kopi pilihan dengan crema tebal yang intens.</p>
                 </div>
-                <!-- Double Espresso -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1579888944880-d98341148733?auto=format&fit=crop&q=80&w=300" alt="Double Espresso" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Double Espresso</h4>
-                    <p class="text-gray-500 text-xs mt-2">Dosis ganda espresso murni untuk suntikan energi maksimal sepanjang hari.</p>
+                <!-- Latte -->
+                <div class="group bg-askuMuda p-5 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-md border border-transparent hover:border-gray-100">
+                    <div class="overflow-hidden rounded-xl mb-4 aspect-square bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&q=80&w=400" alt="Latte" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h4 class="font-bold text-gray-900 text-base mt-2">Latte & Cappuccino</h4>
+                    <p class="text-gray-500 text-xs mt-1 leading-relaxed">Perpaduan espresso dengan microfoam susu yang lembut dan gurih.</p>
                 </div>
-                <!-- Latte, Capp, Flat -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&q=80&w=300" alt="Latte, Capp, Flat" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Latte / Cappuccino / Flat White</h4>
-                    <p class="text-gray-500 text-xs mt-2">Kombinasi klasik espresso lembut dengan kelembutan susu *creamy* bertekstur sempurna.</p>
-                </div>
-                <!-- Shaken Espresso -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&q=80&w=300" alt="Shaken Espresso" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Shaken Espresso</h4>
-                    <p class="text-gray-500 text-xs mt-2">Espresso kocok es yang menghasilkan sensasi dingin berbusa lembut dan manis seimbang.</p>
-                </div>
-                <!-- Es Kopi Susu Asku -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center border-emerald-500/30 bg-emerald-50/20">
-                    <img src="https://images.unsplash.com/photo-1553909489-cd47e0907980?auto=format&fit=crop&q=80&w=300" alt="Es Kopi Susu Asku" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900 text-emerald-800">Es Kopi Susu Asku ⭐</h4>
-                    <p class="text-gray-500 text-xs mt-2">Menu signature kami! Racikan kopi susu rahasia yang manis, legit, dan bikin rindu.</p>
-                </div>
-                <!-- Caramel Machiato -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1596152497886-f728c3098fa0?auto=format&fit=crop&q=80&w=300" alt="Caramel Machiato" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Caramel Macchiato</h4>
-                    <p class="text-gray-500 text-xs mt-2">Sentuhan manis sirup karamel mewah berpadu dengan gurihnya susu dan espresso.</p>
-                </div>
-                <!-- Mochachino -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1607687325212-478a23006994?auto=format&fit=crop&q=80&w=300" alt="Mochachino" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Mochachino</h4>
-                    <p class="text-gray-500 text-xs mt-2">Harmoni sempurna antara pahit-manis cokelat premium dengan espresso andalan.</p>
-                </div>
-                <!-- Cold Brew -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=300" alt="Cold Brew" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Cold Brew</h4>
-                    <p class="text-gray-500 text-xs mt-2">Kopi seduh dingin selama 12 jam, menghasilkan rasa yang halus, ringan, dan menyegarkan.</p>
+                <!-- Caramel Macchiato -->
+                <div class="group bg-askuMuda p-5 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-md border border-transparent hover:border-gray-100">
+                    <div class="overflow-hidden rounded-xl mb-4 aspect-square bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1596152497886-f728c3098fa0?auto=format&fit=crop&q=80&w=400" alt="Caramel Macchiato" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h4 class="font-bold text-gray-900 text-base mt-2">Caramel Macchiato</h4>
+                    <p class="text-gray-500 text-xs mt-1 leading-relaxed">Sentuhan manis sirup karamel mewah, espresso, dan susu dingin.</p>
                 </div>
             </div>
         </div>
 
-        <!-- CATEGORY 2: NON-COFFEE -->
-        <div class="mb-16">
-            <h3 class="text-2xl font-bold text-emerald-800 border-b border-gray-200 pb-3 mb-8">🍹 Non-Coffee & Ice Blended</h3>
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <!-- Milo Dinosaurus -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1541658016709-82535e94bc69?auto=format&fit=crop&q=80&w=300" alt="Milo Dinosaurus" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Milo Dinosaurus</h4>
-                    <p class="text-gray-500 text-xs mt-2">Susu Milo dingin super pekat dengan taburan bubuk cokelat Milo melimpah di atasnya.</p>
+        <!-- 2. NON-COFFEE & ICE BLENDED -->
+        <div class="mb-20">
+            <div class="flex items-center space-x-3 mb-10 border-b border-gray-100 pb-4">
+                <h3 class="text-xl font-extrabold text-askuHijau tracking-wider uppercase border-l-4 border-askuCokelat pl-3">🍹 Non-Coffee & Ice Blended</h3>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Matcha -->
+                <div class="group bg-askuMuda p-5 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-md border border-transparent hover:border-gray-100">
+                    <div class="overflow-hidden rounded-xl mb-4 aspect-square bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?auto=format&fit=crop&q=80&w=400" alt="Matcha" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h4 class="font-bold text-gray-900 text-base mt-2">Matcha Latte / Frostee</h4>
+                    <p class="text-gray-500 text-xs mt-1 leading-relaxed">Teh hijau Jepang autentik yang menenangkan berpadu kelembutan susu.</p>
                 </div>
-                <!-- Ice Tea -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=300" alt="Ice Tea" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Ice Tea</h4>
-                    <p class="text-gray-500 text-xs mt-2">Kesegaran teh klasik pilihan yang disajikan dingin untuk pelepas dahaga instan.</p>
+                <!-- Premium Chocolate -->
+                <div class="group bg-askuMuda p-5 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-md border border-transparent hover:border-gray-100">
+                    <div class="overflow-hidden rounded-xl mb-4 aspect-square bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=400" alt="Chocolate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h4 class="font-bold text-gray-900 text-base mt-2">Choco Cream Cheese</h4>
+                    <p class="text-gray-500 text-xs mt-1 leading-relaxed">Cokelat pekat premium dengan lapisan cream cheese asin gurih melimpah.</p>
                 </div>
-                <!-- Peach Tea -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&q=80&w=300" alt="Peach Tea" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Peach Tea</h4>
-                    <p class="text-gray-500 text-xs mt-2">Teh wangi dengan infus buah persik segar yang manis, aromatik, dan menyegarkan.</p>
+                <!-- Fruit Tea -->
+                <div class="group bg-askuMuda p-5 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-md border border-transparent hover:border-gray-100">
+                    <div class="overflow-hidden rounded-xl mb-4 aspect-square bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&q=80&w=400" alt="Peach Tea" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h4 class="font-bold text-gray-900 text-base mt-2">Peach / Lychee Tea</h4>
+                    <p class="text-gray-500 text-xs mt-1 leading-relaxed">Teh premium segar dengan potongan buah asli yang manis aromatik.</p>
                 </div>
-                <!-- Lychee Tea -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=300" alt="Lychee Tea" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Lychee Tea</h4>
-                    <p class="text-gray-500 text-xs mt-2">Paduan teh premium dengan manisnya buah leci segar yang selalu jadi favorit.</p>
-                </div>
-                <!-- Thai Tea -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1541658016709-82535e94bc69?auto=format&fit=crop&q=80&w=300" alt="Thai Tea" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Thai Tea</h4>
-                    <p class="text-gray-500 text-xs mt-2">Teh khas Thailand autentik yang pekat, berpadu kental manis yang gurih merata.</p>
-                </div>
-                <!-- Thai Greentea -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&q=80&w=300" alt="Thai Greentea" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Thai Greentea</h4>
-                    <p class="text-gray-500 text-xs mt-2">Varian matcha ala Thailand dengan sensasi rasa manis yang unik dan lembut.</p>
-                </div>
-                <!-- Matcha Latte -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?auto=format&fit=crop&q=80&w=300" alt="Matcha Latte" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Matcha Latte</h4>
-                    <p class="text-gray-500 text-xs mt-2">Teh hijau Jepang murni premium berpadu susu lembut, menciptakan rasa khas yang menenangkan.</p>
-                </div>
-                <!-- Chocolate -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=300" alt="Chocolate" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Chocolate</h4>
-                    <p class="text-gray-500 text-xs mt-2">Cokelat pekat pilihan berkualitas tinggi dengan rasa legit yang mendalam.</p>
-                </div>
-                <!-- Lychee Milk -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&q=80&w=300" alt="Lychee Milk" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Lychee Milk</h4>
-                    <p class="text-gray-500 text-xs mt-2">Kombinasi unik susu segar gurih dengan sirup leci fruity yang manis memanjakan lidah.</p>
-                </div>
-                <!-- Blue Sky -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=300" alt="Blue Sky" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Blue Sky</h4>
-                    <p class="text-gray-500 text-xs mt-2">Minuman segar berwarna biru cerah estetis dengan sensasi rasa jeruk citrus yang memikat.</p>
-                </div>
-                <!-- Vanilla / Strawberry / Chocolate Milkshake -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&q=80&w=300" alt="Milkshake Series" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Milkshake Series</h4>
-                    <p class="text-gray-500 text-xs mt-2">Pilihan rasa klasik (Vanilla, Strawberry, Cokelat) yang di-blended dengan susu berbusa tebal.</p>
-                </div>
-                <!-- Devil Mint Choco -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&q=80&w=300" alt="Devil Mint Choco" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Devil Mint Choco</h4>
-                    <p class="text-gray-500 text-xs mt-2">Kombinasi berani cokelat pekat setan dengan sensasi dingin mint segar yang meledak.</p>
-                </div>
-                <!-- Dragon Berry -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&q=80&w=300" alt="Dragon Berry" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Dragon Berry</h4>
-                    <p class="text-gray-500 text-xs mt-2">Perpaduan buah naga segar kaya vitamin dengan buah berry asam manis yang eksotis.</p>
-                </div>
-                <!-- Matcha Frostee -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&q=80&w=300" alt="Matcha Frostee" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Matcha Frostee</h4>
-                    <p class="text-gray-500 text-xs mt-2">Matcha blended super dingin dengan sensasi es salju bertekstur lembut di mulut.</p>
-                </div>
-                <!-- Java Chip Ice Blended -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&q=80&w=300" alt="Java Chip Ice Blended" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Java Chip Ice Blended</h4>
-                    <p class="text-gray-500 text-xs mt-2">Es kopi blender premium dengan taburan butiran cokelat renyah di setiap sesapan.</p>
-                </div>
-                <!-- Caramel Coffee Freeze -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1596152497886-f728c3098fa0?auto=format&fit=crop&q=80&w=300" alt="Caramel Coffee Freeze" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Caramel Coffee Freeze</h4>
-                    <p class="text-gray-500 text-xs mt-2">Kopi beku bertekstur salju yang disiram saus karamel gurih melimpah.</p>
-                </div>
-                <!-- Banananana -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&q=80&w=300" alt="Banananana" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Banananana</h4>
-                    <p class="text-gray-500 text-xs mt-2">Sensasi buah pisang manis berpadu gurih susu, dikocok lembut dan sangat nagih.</p>
-                </div>
-                <!-- Choco Cream Cheese -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=300" alt="Choco Cream Cheese" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Choco Cream Cheese</h4>
-                    <p class="text-gray-500 text-xs mt-2">Cokelat pekat premium dengan lapisan keju krim asin gurih yang meleleh di atasnya.</p>
-                </div>
-                <!-- TWG Tea / Mineral -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&q=80&w=300" alt="TWG Tea" class="w-32 h-32 object-cover mx-auto rounded-full mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">TWG Premium Tea</h4>
-                    <p class="text-gray-500 text-xs mt-2">Pilihan teh mewah kelas dunia dengan seduhan aroma aromatik berkelas dan menenangkan.</p>
+                <!-- Milo Dino -->
+                <div class="group bg-askuMuda p-5 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-md border border-transparent hover:border-gray-100">
+                    <div class="overflow-hidden rounded-xl mb-4 aspect-square bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1541658016709-82535e94bc69?auto=format&fit=crop&q=80&w=400" alt="Milo Dinosaurus" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h4 class="font-bold text-gray-900 text-base mt-2">Milo Dinosaurus</h4>
+                    <p class="text-gray-500 text-xs mt-1 leading-relaxed">Susu Milo pekat dingin dengan taburan bubuk cokelat ekstra melimpah.</p>
                 </div>
             </div>
         </div>
 
-        <!-- CATEGORY 3: PASTRY & SNACKS -->
+        <!-- 3. PREMIUM PASTRY & SNACKS -->
         <div>
-            <h3 class="text-2xl font-bold text-emerald-800 border-b border-gray-200 pb-3 mb-8">🥐 Premium Pastry & Snacks</h3>
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <!-- Croissant Series -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&q=80&w=300" alt="Croissant" class="w-32 h-32 object-cover mx-auto rounded-xl mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Croissant Series</h4>
-                    <p class="text-gray-500 text-xs mt-2">Pastry berlapis renyah khas Prancis (Tersedia: Plain, Melted Chocolate, Almond).</p>
-                </div>
-                <!-- Bagel On Toast -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1585478259715-876a6a64bfc6?auto=format&fit=crop&q=80&w=300" alt="Bagel on Toast" class="w-32 h-32 object-cover mx-auto rounded-xl mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Bagel On Toast</h4>
-                    <p class="text-gray-500 text-xs mt-2">Roti bagel bertekstur padat yang dipanggang sempurna, renyah di luar lembut di dalam.</p>
-                </div>
-                <!-- Cakes -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=300" alt="Cake Series" class="w-32 h-32 object-cover mx-auto rounded-xl mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Premium Cake</h4>
-                    <p class="text-gray-500 text-xs mt-2">Kue lembut premium pendamping kopi terbaikmu (Tersedia: Chocolate Cake / Carrot Cake).</p>
-                </div>
-                <!-- Homemade Risol -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=300" alt="Homemade Risol" class="w-32 h-32 object-cover mx-auto rounded-xl mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Homemade Risol (3 Pcs)</h4>
-                    <p class="text-gray-500 text-xs mt-2">Risol rumahan renyah isi gurih melimpah, digoreng keemasan disajikan hangat.</p>
-                </div>
-                <!-- French Fries -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&q=80&w=300" alt="French Fries" class="w-32 h-32 object-cover mx-auto rounded-xl mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">French Fries</h4>
-                    <p class="text-gray-500 text-xs mt-2">Kentang goreng renyah bumbu gurih pas untuk teman ngobrol santai.</p>
-                </div>
-                <!-- Mix Platters -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&q=80&w=300" alt="Mix Platters" class="w-32 h-32 object-cover mx-auto rounded-xl mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Mix Platters</h4>
-                    <p class="text-gray-500 text-xs mt-2">Kombinasi camilan gurih gorengan terbaik dalam satu piring porsi besar bersama.</p>
+            <div class="flex items-center space-x-3 mb-10 border-b border-gray-100 pb-4">
+                <h3 class="text-xl font-extrabold text-askuHijau tracking-wider uppercase border-l-4 border-askuCokelat pl-3">🥐 Premium Pastry & Snacks</h3>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Croissant -->
+                <div class="group bg-askuMuda p-5 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-md border border-transparent hover:border-gray-100">
+                    <div class="overflow-hidden rounded-xl mb-4 aspect-square bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&q=80&w=400" alt="Croissant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h4 class="font-bold text-gray-900 text-base mt-2">Croissant Series</h4>
+                    <p class="text-gray-500 text-xs mt-1 leading-relaxed">Pastry renyah mentega khas Prancis (Plain, Chocolate, Almond).</p>
                 </div>
                 <!-- Salt Bread -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center">
-                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=300" alt="Salt Bread" class="w-32 h-32 object-cover mx-auto rounded-xl mb-4 bg-gray-100">
-                    <h4 class="font-bold text-gray-900">Salt Bread Series</h4>
-                    <p class="text-gray-500 text-xs mt-2">Roti mentega gurih asin bertabur garam laut alami (Tersedia versi Original & Truffle mewah).</p>
+                <div class="group bg-askuMuda p-5 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-md border border-transparent hover:border-gray-100">
+                    <div class="overflow-hidden rounded-xl mb-4 aspect-square bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=400" alt="Salt Bread" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h4 class="font-bold text-gray-900 text-base mt-2">Salt Bread Series</h4>
+                    <p class="text-gray-500 text-xs mt-1 leading-relaxed">Roti mentega gurih lembut bertabur garam laut alami (Original / Truffle).</p>
+                </div>
+                <!-- Risol -->
+                <div class="group bg-askuMuda p-5 rounded-2xl transition-all duration-300 hover:bg-white hover:shadow-md border border-transparent hover:border-gray-100">
+                    <div class="overflow-hidden rounded-xl mb-4 aspect-square bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&q=80&w=400" alt="Risol" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h4 class="font-bold text-gray-900 text-base mt-2">Homemade Risol (3 Pcs)</h4>
+                    <p class="text-gray-500 text-xs mt-1 leading-relaxed">Risol renyah isi ragout gurih tebal yang disajikan hangat.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800 text-center">
-        <p class="text-lg font-bold text-white tracking-wider mb-2">ASKU COFFEE.</p>
-        <p class="text-sm">&copy; 2026 Asku Coffee. All Rights Reserved.</p>
+    <!-- STORE SECTION -->
+    <section id="store" class="max-w-7xl mx-auto px-6 md:px-12 py-16 text-center">
+        <h2 class="text-3xl font-extrabold text-askuHijau mb-3">Visit Our Store</h2>
+        <p class="text-gray-500 max-w-sm mx-auto mb-10 text-sm">Temukan ruang hangat kami untuk bersantai sejenak atau fokus menyelesaikan pekerjaan.</p>
+        <div class="bg-white p-4 rounded-[2.5rem] shadow-sm max-w-3xl mx-auto border border-gray-100">
+            <div class="bg-askuMuda h-64 rounded-2xl flex flex-col justify-center items-center text-gray-400 border border-dashed border-gray-200">
+                <span class="text-4xl mb-3">📍</span>
+                <p class="font-extrabold text-askuHijau text-lg">Asku Coffee Flagship Store</p>
+                <p class="text-xs text-gray-500 mt-1">Buka Setiap Hari: 07.00 - 22.00</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT US & FOOTER -->
+    <footer id="contact" class="bg-askuHijau text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-4">
+                <!-- Kombinasi Logo di Footer (Versi Putih/Invert) -->
+                <div class="flex items-center space-x-3 bg-white/10 p-2.5 rounded-xl w-fit">
+                    <img src="asku-logo-muka_2.png" alt="Asku" class="h-10 w-10 brightness-0 invert">
+                    <img src="asku-logo-tulisan_2.png" alt="Asku Coffee" class="h-7 brightness-0 invert">
+                </div>
+                <p class="text-sm max-w-sm text-emerald-100/70 leading-relaxed">Esensi kopi terbaik masa kini yang diracik khusus untuk mengembalikan energi produktifmu.</p>
+            </div>
+            <div class="md:text-right space-y-2">
+                <p class="text-xs font-bold tracking-widest text-emerald-400 uppercase">Contact Us</p>
+                <p class="text-white font-medium text-lg">hello@askucoffee.com</p>
+                <p class="text-sm text-emerald-100/60">+62 812-3456-789</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 md:px-12 mt-16 pt-8 border-t border-emerald-900/60 text-center text-xs text-emerald-200/40">
+            &copy; 2026 Asku Coffee. All Rights Reserved.
+        </div>
     </footer>
 
 </body>
