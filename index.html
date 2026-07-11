@@ -188,15 +188,17 @@
     <!-- W-full tanpa max-w agar video melebar penuh seukuran layar PC/HP -->
     <div class="w-full aspect-[21/9] md:aspect-[21/9] aspect-video bg-gray-900 relative">
         <video 
-            id="heroVideo"
-            autoplay 
-            muted 
-            loop 
-            playsinline 
-            preload="auto"
-            class="w-full h-full object-cover block">
-            <source src="asku-video.mp4" type="video/mp4">
-            Browsermu tidak mendukung pemutaran video HTML5.
+    id="heroVideo"
+    autoplay="autoplay" 
+    muted="true"
+    loop="true" 
+    playsinline
+    webkit-playsinline
+    preload="auto"
+    class="w-full h-full object-cover block antialiased"
+    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; transform: translateZ(0);">
+    <source src="asku-video.mp4" type="video/mp4">
+    Browsermu tidak mendukung pemutaran video HTML5.
         </video>
         <!-- Overlay gelap tipis khas Chagee -->
         <div class="absolute inset-0 bg-black/5 pointer-events-none"></div>
