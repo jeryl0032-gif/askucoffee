@@ -374,11 +374,14 @@
         <div style="display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; gap: 2rem;" class="md:flex-row">
             
             <!-- SISI KIRI: LOGO & DESKRIPSI -->
-            <div style="max-width: 24rem; display: flex; flex-direction: column; gap: 1.5rem;">
-                <!-- KOTAK LOGO (Silakan sesuaikan isi src="logo.png" jika nama file berbeda) -->
-                <div style="display: inline-block; border: 1px solid rgba(255, 255, 255, 0.2); background-color: rgba(255, 255, 255, 0.05); border-radius: 0.75rem; padding: 0.75rem; width: fit-content;">
-                    <img src="asku-logo-muka.png" alt="Asku Coffee" style="height: 2.25rem; object-fit: contain;">
-                </div>
+          <!-- Bingkai disesuaikan agar membungkus logo dengan pas (p-4) -->
+<div class="flex items-center bg-white/10 p-4 rounded-[2rem] w-fit">
+    <!-- Logo muka tanpa invert agar garis putih aslinya terlihat jelas -->
+    <img src="asku-logo-muka_2.png" alt="Asku" class="h-20 w-20 object-contain">
+    
+    <!-- Logo tulisan tanpa invert agar teks putih aslinya muncul -->
+    <img src="asku-logo-tulisan_2.png" alt="Asku Coffee" class="h-16 object-contain -ml-3">
+</div>
                 
                 <p style="font-size: 0.875rem; color: #d1d5db; line-height: 1.625;">
                     Rasakan kesegaran racikan kopi masa kini dengan komitmen rasa terbaik di kelasnya.
